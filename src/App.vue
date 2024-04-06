@@ -8,6 +8,7 @@ import LengthSection from '@/components/docs/sections/LengthSection.vue';
 import CopyPasteSection from '@/components/docs/sections/CopyPasteSection.vue';
 import StylingSection from '@/components/docs/sections/StylingSection.vue';
 import ImmediateUpdatesSection from '@/components/docs/sections/ImmediateUpdatesSection.vue';
+import InputModeSection from '@/components/docs/sections/InputModeSection.vue';
 
 const sidebarOpen = ref(false);
 </script>
@@ -69,6 +70,8 @@ const sidebarOpen = ref(false);
         <CopyPasteSection class="mb-16"/>
 
         <ImmediateUpdatesSection class="mb-16"/>
+
+        <InputModeSection class="mb-16"/>
 
         <StylingSection class="mb-16"/>
       </div>

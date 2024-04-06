@@ -1,6 +1,6 @@
 {
   "name": "@loltech/vue3-2fa-code-input",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vue 3 input component for 2FA codes. Is alpha-numerically agnostic, supports copy-pasting and is written in Typescript.",
   "keywords": [
     "vue",

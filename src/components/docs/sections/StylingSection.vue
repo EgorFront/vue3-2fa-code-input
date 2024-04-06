@@ -19,10 +19,9 @@ const code = ref<string | null>(null);
         container) and <code>vue3-2fa-code-input-box</code> (which are the individual character inputs). If you want,
         you can change these class names, the first by supplying <code>class</code> to the component itself, and for the
         input box there is a property named <code>inputClass</code>, so to change both class names you would do
-        something like this: <code>
-        &lt;Vue2FACodeInput class="you-container-class-here" input-class="your-input-box-class-here" v-model="yourRef"/>
-      </code>.
+        something like this:
       </p>
+      <pre class="mb-4 mt-4"><code>&lt;Vue2FACodeInput class="you-container-class-here" input-class="your-input-box-class-here" v-model="yourRef"/></code></pre>
       <p class="mb-2">
         Keep in mind, the classes you supply get added to the existing ones and do not replace them, so those can still
         be used.
@@ -57,6 +56,9 @@ const code = ref<string | null>(null);
         @apply block w-8 rounded-md border-[1px] bg-transparent border-gray-200 dark:border-gray-50 py-1.5 text-center text-gray-900 dark:text-white shadow-sm focus-visible:outline focus-visible:outline-indigo-500;
     }
 
+    /**
+     * This particular piece of code makes the last input have a gap in the middle.
+     */
     .spaced-code-input {
         & .vue3-2fa-code-input-box {
             &:nth-child(3) {

@@ -14,6 +14,7 @@ import SidebarLink from '@/components/docs/SidebarLink.vue';
               <SidebarLink href="#length">Length</SidebarLink>
               <SidebarLink href="#copy-paste">Copy-Paste</SidebarLink>
               <SidebarLink href="#immediate-updates">Immediate updates</SidebarLink>
+              <SidebarLink href="#input-mode">Input mode</SidebarLink>
               <SidebarLink href="#styling">Styling</SidebarLink>
             </li>
           </ul>

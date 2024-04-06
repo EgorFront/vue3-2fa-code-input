@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+type InputMode = 'decimal' | 'email' | 'none' | 'numeric' | 'search' | 'tel' | 'text' | 'url';
+
 interface Props {
   length?: number;
   autofocus?: boolean;
   inputClass?: string;
   updateImmediately?: boolean;
+  inputmode?: InputMode;
   modelValue: string | null;
 }
 
@@ -13,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   length: 6,
   autofocus: true,
   updateImmediately: false,
+  inputmode: 'text',
 });
 
 const emit = defineEmits<{ (e: 'update:modelValue', value: string | null): void }>();
@@ -94,6 +98,6 @@ function onKeyDown(event: KeyboardEvent, index: number) {
            :ref="(element) => assignRef((element as HTMLInputElement), index)"
            @paste.prevent="onPaste" @focusin.prevent="onFocusIn"
            @input.prevent="onInput(index)" @keydown="onKeyDown($event, index)"
-           :autofocus="props.autofocus && index === 0">
+           :autofocus="props.autofocus && index === 0" :inputmode="props.inputmode">
   </div>
 </template>
